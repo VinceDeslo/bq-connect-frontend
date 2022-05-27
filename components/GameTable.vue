@@ -2,13 +2,14 @@
 import { Game } from '@/data/GameData'
 
 interface GameTableProps {
-  games: Game[]
+  games: Game[] | null
 }
 const props = withDefaults(defineProps<GameTableProps>(), {})
 </script>
 
 <template>
-  <table class="table">
+  <p v-if="!games">The Games array is empty</p>
+  <table v-else class="table">
     <tr>
       <th class="cell" v-for="attr in Object.keys(games[0])">{{ attr }}</th>
     </tr>
