@@ -5,7 +5,10 @@ const title = "Home page"
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <NuxtLink to="/adventure">Adventure Games</NuxtLink>
+    <ul>
+       <li><NuxtLink to="/all">All Games</NuxtLink></li>
+       <li><NuxtLink to="/adventure">Adventure Games</NuxtLink></li>
+    </ul>
   </div>
 </template>
 

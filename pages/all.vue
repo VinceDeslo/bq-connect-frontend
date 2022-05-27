@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const title = "Adventure Page"
+const title = "All Games Page"
 </script>
 
 <template>
   <div>
     <h1>{{ title }}</h1>
     <NuxtLink to="/">Back to home</NuxtLink>
-    <AdventureGames/>
+    <AllGames/>
   </div>
 </template>
 
