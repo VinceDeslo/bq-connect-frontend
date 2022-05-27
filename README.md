@@ -2,15 +2,15 @@
 
 A small Vue3 frontend to display information from a microservice
 
-### Infrastructure
-[Infrastructure of the project](https://github.com/VinceDeslo/bq-connect-infra)
+### Related Infrastructure
+[bq-connect-infra](https://github.com/VinceDeslo/bq-connect-infra)
 
-### Microservice
-[Connector microservice](https://github.com/VinceDeslo/bq-connect)   
+### Related Microservice
+[bq-connect](https://github.com/VinceDeslo/bq-connect)   
 
 ### Roadmap
 - [x] Nuxt3 scaffolding
-- [ ] Basic pagination for genres
+- [x] Basic pagination for genres
 - [ ] Dockerfile and Docker Compose up and running
 
 ### Purpose
