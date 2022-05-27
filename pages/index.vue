@@ -6,8 +6,19 @@ const title = "Home page"
   <div>
     <h1>{{ title }}</h1>
     <ul>
-       <li><NuxtLink to="/all">All Games</NuxtLink></li>
-       <li><NuxtLink to="/adventure">Adventure Games</NuxtLink></li>
+      <Button label="All Games" class="p-button-success">
+        <NuxtLink to="/all">All Games</NuxtLink>
+      </Button>
+      <Button label="Adventure Games" class="p-button-success">
+        <NuxtLink to="/adventure">Adventure Games</NuxtLink>
+      </Button>
+
+      <!-- <li>
+        <NuxtLink to="/all">All Games</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/adventure">Adventure Games</NuxtLink>
+      </li> -->
     </ul>
   </div>
 </template>

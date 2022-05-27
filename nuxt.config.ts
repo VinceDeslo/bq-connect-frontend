@@ -26,5 +26,13 @@ export default defineNuxtConfig({
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
     ]
+  },
+  css: [
+    'primevue/resources/themes/luna-amber/theme.css',
+    'primevue/resources/primevue.css',
+    'primeicons/primeicons.css'
+  ],
+  build: {
+    transpile: ['primevue']
   }
 })
