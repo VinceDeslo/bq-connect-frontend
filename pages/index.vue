@@ -5,23 +5,23 @@ const title = "Home page"
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <ul>
-      <Button label="All Games" class="p-button-success">
-        <NuxtLink to="/all">All Games</NuxtLink>
-      </Button>
-      <Button label="Adventure Games" class="p-button-success">
-        <NuxtLink to="/adventure">Adventure Games</NuxtLink>
-      </Button>
-
-      <!-- <li>
-        <NuxtLink to="/all">All Games</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/adventure">Adventure Games</NuxtLink>
-      </li> -->
-    </ul>
+    <span class="buttons">
+      <NuxtLink to="/all" style="text-decoration: none;">
+        <Button icon="pi pi-angle-right" label="All Games" class="button p-button-rounded p-button-primary" />
+      </NuxtLink>
+      <NuxtLink to="/adventure" style="text-decoration: none;">
+        <Button icon="pi pi-angle-right" label="Adventure Games" class="button p-button-rounded p-button-primary" />
+      </NuxtLink>
+    </span>
   </div>
 </template>
 
 <style>
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    margin: 0.5rem
+  }
 </style>

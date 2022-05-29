@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     ]
   },
   css: [
-    'primevue/resources/themes/luna-amber/theme.css',
+    'primevue/resources/themes/mdc-dark-indigo/theme.css',
     'primevue/resources/primevue.css',
     'primeicons/primeicons.css'
   ],

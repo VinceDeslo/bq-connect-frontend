@@ -7,11 +7,8 @@ const { data: games, pending, error, refresh } = useFetch<Game[]>(Endpoints.all)
 
 <template>
   <div>
-    <p v-if="pending">Loading ...</p>
-    <div v-else-if="error">
-      <h4>Error occured while fetching</h4>
-      <button @click="refresh()">Retry</button>
-    </div>
-    <GameTable :games="games"/>
+    <ProgressSpinner v-if="pending"/>
+    <Error v-else-if="error" message="Fetching the data failed" :retry="refresh"/>
+    <GameTable v-else :games="games"/>
   </div>
 </template>

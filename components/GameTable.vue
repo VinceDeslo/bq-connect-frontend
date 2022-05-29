@@ -1,34 +1,27 @@
 <script setup lang="ts">
 import { Game } from '@/data/GameData'
+import Column from 'primevue/column';
 
 interface GameTableProps {
-  games: Game[] | null
+  games: Game[] | undefined
 }
+interface ColumnDef { 
+  field: string,
+  header: string
+}
+
 const props = withDefaults(defineProps<GameTableProps>(), {})
+const { games } = toRefs(props);
+
+let firstItem = games?.value?.slice(0, 1) ?? [];
+let columns: ColumnDef[] = Object.keys(firstItem[0]).map(key => {
+  return { field: key, header: key } as ColumnDef
+})
 </script>
 
 <template>
   <p v-if="!games">The Games array is empty</p>
-  <table v-else class="table">
-    <tr>
-      <th class="cell" v-for="attr in Object.keys(games[0])">{{ attr }}</th>
-    </tr>
-    <tr v-for="game in games">
-      <td v-for="attr in game">{{ attr ?? "-" }}</td>
-    </tr>
-  </table>
+  <DataTable v-else :value="games">
+    <Column v-for="col in columns" :field="col.field" :header="col.header"/>
+  </DataTable>
 </template>
-
-<style>
-.table {
-  font-family: Arial, Arial, Helvetica, sans-serif;
-}
-.cell {
-  border: 1px solid rgb(0, 0, 0);
-  text-align: left;
-  padding: 5px;
-  max-width: 100%;
-  white-space: nowrap;
-  background-color: lightgrey;
-}
-</style>
